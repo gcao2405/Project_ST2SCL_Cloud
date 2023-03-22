@@ -1,6 +1,6 @@
 # Project_ST2SCL_Cloud
 
-## Service 1
+## Service 1 : backend
 
 ### Install Docker and Test service1 using Docker
 
@@ -37,4 +37,8 @@ This format of this address is NodeIP:NodePort.
 
 Test this address inside your browser. It should display hello again.
 
-## Service 2
+## Service 2 : frontend
+
+### Create a kubernetes deployment from Docker image : gaoweicao/service2:1
+
+kubectl apply -f front-back-app.yml

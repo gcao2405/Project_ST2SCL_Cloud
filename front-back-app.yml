@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: back-end
+  template:
+    metadata:
+      labels:
+        app: back-end
+    spec:
+      containers:
+        - name: back-end-container
+          image: gaoweicao/service1:1
+          imagePullPolicy: Always
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: service1
+spec:
+  ports:
+    - name: http
+      targetPort: 8080
+      port: 80
+  type: ClusterIP
+  selector:
+    app: back-end
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service2-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front-end
+  template:
+    metadata:
+      labels:
+        app: front-end
+    spec:
+      containers:
+      - name: front-end-container
+        image: gaoweicao/service2:1
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service2
+spec:
+  ports:
+    - name: http
+      targetPort: 8080
+      port: 80
+  type: NodePort
+  selector:
+    app: front-end
+---

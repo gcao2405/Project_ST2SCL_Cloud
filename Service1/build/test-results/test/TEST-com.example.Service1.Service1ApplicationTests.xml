@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.Service1.Service1ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-22T09:02:28" hostname="LAPTOP-S8BA7F0S" time="0.498">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.example.Service1.Service1ApplicationTests" time="0.498"/>
+  <system-out><![CDATA[10:02:25.805 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [Service1ApplicationTests]: using SpringBootContextLoader
+10:02:25.812 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.Service1.Service1ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:02:25.812 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.Service1.Service1ApplicationTests]: Service1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:02:25.850 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [Service1ApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+10:02:25.968 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\gaowe\Desktop\Software Engineering for the Cloud (ST2SCL)\Project_ST2SCL_Cloud\Service1\build\classes\java\main\com\example\Service1\Service1Application.class]
+10:02:25.970 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.Service1.Service1Application for test class com.example.Service1.Service1ApplicationTests
+10:02:26.121 [Test worker] DEBUG org.springframework.test.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+10:02:26.123 [Test worker] DEBUG org.springframework.test.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+10:02:26.125 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [Service1ApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+10:02:26.127 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [Service1ApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.2)
+
+2023-02-22T10:02:26.496+01:00  INFO 19248 --- [    Test worker] c.e.Service1.Service1ApplicationTests    : Starting Service1ApplicationTests using Java 17.0.4.1 with PID 19248 (started by frGael in C:\Users\gaowe\Desktop\Software Engineering for the Cloud (ST2SCL)\Project_ST2SCL_Cloud\Service1)
+2023-02-22T10:02:26.497+01:00  INFO 19248 --- [    Test worker] c.e.Service1.Service1ApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-02-22T10:02:28.247+01:00  INFO 19248 --- [    Test worker] c.e.Service1.Service1ApplicationTests    : Started Service1ApplicationTests in 2.06 seconds (process running for 3.486)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
