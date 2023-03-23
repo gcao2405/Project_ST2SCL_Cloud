@@ -126,6 +126,7 @@ Enable a tunnel for Minikube:
 ```
 minikube addons enable ingress-dns
 ```
+```
 minikube tunnel
 ```
 Then check in your Web browser for the front-end service :
