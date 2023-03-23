@@ -130,7 +130,13 @@ minikube addons enable ingress-dns
 ```
 minikube tunnel
 ```
-Then check in your Web browser for the front-end service :
+
+Then apply the yaml file again : 
+```
+kubectl apply -f front-back-app.yml
+```
+
+Check now in your Web browser for the front-end service :
 ```
 http://front-end.localhost/service2
 ```
