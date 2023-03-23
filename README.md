@@ -90,7 +90,7 @@ The type set to ClusterIP. A Kubernetes Service is an abstraction which defines 
 
 Kubernetes supports 2 primary modes of finding a Service - environment variables and DNS (Domain Name Server). The former works out of the box while the latter requires the CoreDNS cluster addon.
 
-The backend address is injected inside the frontend app (https://github.com/charroux/CodingWithKubernetes/blob/master/FrontEnd/src/main/java/com/example/FrontEnd/MyWebService.java) with:
+The backend address is injected inside the frontend app (https://github.com/gcao2405/Project_ST2SCL_Cloud/blob/main/Service2/src/main/java/com/example/Service2/MyWebService.java) with:
 ```
 @Value("${backEndURL}")
 String backEndURL;
