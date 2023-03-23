@@ -64,3 +64,14 @@ The type for the frontend is set to NodePort. His behaviors are to expose the Se
 #### The backend deployment and the backend service in front of the deployment
 
 The type set to ClusterIP. A Kubernetes Service is an abstraction which defines a logical set of Pods running somewhere in the cluster, that all provide the same functionality. When created, each Service is assigned a unique IP address (also called clusterIP). This address is tied to the lifespan of the Service, and will not change while the Service is alive.
+
+### Test the app from a Web browser
+
+Since the kind of the front-end service is NodePort you can get its IP address with:
+
+```
+minikube service service2 --url
+```
+
+Then test the app with a Web browser.
+It should display 'hello (from the front end) Hello from Service 1 ! (from the back end)'
