@@ -65,6 +65,16 @@ The type for the frontend is set to NodePort. His behaviors are to expose the Se
 
 The type set to ClusterIP. A Kubernetes Service is an abstraction which defines a logical set of Pods running somewhere in the cluster, that all provide the same functionality. When created, each Service is assigned a unique IP address (also called clusterIP). This address is tied to the lifespan of the Service, and will not change while the Service is alive.
 
+### Service discovery: how the frontend can reache the backend ?
+
+Kubernetes supports 2 primary modes of finding a Service - environment variables and DNS (Domain Name Server). The former works out of the box while the latter requires the CoreDNS cluster addon.
+
+The backend address is injected inside the frontend app (https://github.com/charroux/CodingWithKubernetes/blob/master/FrontEnd/src/main/java/com/example/FrontEnd/MyWebService.java) with:
+```
+@Value("${backEndURL}")
+String backEndURL;
+```
+
 ### Test the app from a Web browser
 
 Since the kind of the front-end service is NodePort you can get its IP address with:
@@ -75,3 +85,5 @@ minikube service service2 --url
 
 Then test the app with a Web browser.
 It should display 'hello (from the front end) Hello from Service 1 ! (from the back end)'
+
+## 
