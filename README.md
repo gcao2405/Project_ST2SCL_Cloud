@@ -119,8 +119,9 @@ minikube addons enable ingress
 ```
 
 On Windows : edit the c:\windows\system32\drivers\etc\hosts file, add
-
+```
 127.0.0.1 front-end.localhost
+```
 
 Enable a tunnel for Minikube:
 ```
