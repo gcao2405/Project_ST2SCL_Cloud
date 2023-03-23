@@ -107,4 +107,32 @@ minikube service service2 --url
 Then test the app with a Web browser.
 It should display 'hello (from the front end) Hello from Service 1 ! (from the back end)'
 
-## 
+## Routing rule to a service using Ingress
+
+You can use Ingress to expose your Service. Ingress is not a Service type, but it acts as the entry point for your cluster. It lets you consolidate your routing rules into a single resource as it can expose multiple services under the same IP address. Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. An Ingress may be configured to give Services externally-reachable URLs, load balance traffic, terminate SSL / TLS, and offer name-based virtual hosting.
+
+### Set up Ingress on Minikube with the NGINX Ingress Controller
+
+Enable the NGINX Ingress controller:
+```
+minikube addons enable ingress
+```
+
+On Windows : edit the c:\windows\system32\drivers\etc\hosts file, add
+
+127.0.0.1 front-end.localhost
+
+Enable a tunnel for Minikube:
+```
+minikube addons enable ingress-dns
+```
+minikube tunnel
+```
+Then check in your Web browser for the front-end service :
+```
+http://front-end.localhost/service2
+```
+For the back-end service :
+```
+http://front-end.localhost/service1
+```
