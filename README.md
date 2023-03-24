@@ -2,8 +2,8 @@
 
 A web app composed of two web services:
 
-a frontend
-a backend
+- a frontend
+- a backend
 
 ## Service 1 : backend
 
