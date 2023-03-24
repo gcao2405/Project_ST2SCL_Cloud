@@ -1,5 +1,10 @@
 # Project_ST2SCL_Cloud
 
+A web app composed of two web services:
+
+a frontend
+a backend
+
 ## Service 1 : backend
 
 The backend is coded in Java (Spring boot), but it doesn't matter. The Web service simply return "Hello from Service 1 !" when it receives an HTTP Get on "/": https://github.com/gcao2405/Project_ST2SCL_Cloud/blob/main/Service1/src/main/java/com/example/Service1/MyWebService.java
