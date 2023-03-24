@@ -2,6 +2,10 @@
 
 ## Service 1 : backend
 
+The backend is coded in Java (Spring boot), but it doesn't matter. The Web service simply return "Hello from Service 1 !" when it receives an HTTP Get on "/": https://github.com/gcao2405/Project_ST2SCL_Cloud/blob/main/Service1/src/main/java/com/example/Service1/MyWebService.java
+
+A Docker image is already available is the docker hub at: https://hub.docker.com/u/gaoweicao, and this project uses it.
+
 ### Install Docker and Test service1 using Docker
 
 Start the container: 
@@ -55,6 +59,23 @@ This format of this address is NodeIP:NodePort.
 Test this address inside your browser. It should display hello.
 
 ## Service 2 : frontend
+
+The frontend (also coded in Java Spring boot) waits for an HTTP get on "/". Then it requests the backend service:
+
+```
+restTemplate restTemplate = new RestTemplate();
+String s = restTemplate.getForObject(backEndURL, String.class);
+```
+
+and concatenates and returns the result "Hello from Service 1 !" with "Hello": 
+
+```
+return "hello (from the front end)" + " " + s + " (from the back end)";
+```
+
+https://github.com/gcao2405/Project_ST2SCL_Cloud/blob/main/Service2/src/main/java/com/example/Service2/MyWebService.java
+
+A Docker image is already available is the docker hub at: https://hub.docker.com/u/gaoweicao, and this project uses it.
 
 ### Create a kubernetes deployment from Docker image : gaoweicao/service2:1
 
